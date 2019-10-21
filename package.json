@@ -17,6 +17,7 @@
     "test": "tsc && karma start",
     "coveralls": "coveralls < coverage/lcovonly/lcov.info"
   },
+  "files": ["dist/**/*"],
   "repository": {
     "type": "git",
     "url": "https://github.com/lukasz-galka/ngx-gallery.git"
