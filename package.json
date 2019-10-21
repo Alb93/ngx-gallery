@@ -1,4 +1,5 @@
 {
+  "main": "dist/index.js",
   "name": "ngx-gallery",
   "version": "5.10.0",
   "description": "Responsive Angular 2 / 4 image gallery plugin",
