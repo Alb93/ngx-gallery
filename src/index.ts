@@ -1,14 +1,16 @@
-import { NgModule, ModuleWithProviders } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { HammerGestureConfig, HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {HAMMER_GESTURE_CONFIG, HammerGestureConfig} from '@angular/platform-browser';
 
-import { NgxGalleryActionComponent } from './ngx-gallery-action.component';
-import { NgxGalleryArrowsComponent } from './ngx-gallery-arrows.component';
-import { NgxGalleryBulletsComponent } from './ngx-gallery-bullets.component';
-import { NgxGalleryImageComponent } from './ngx-gallery-image.component';
-import { NgxGalleryThumbnailsComponent } from './ngx-gallery-thumbnails.component';
-import { NgxGalleryPreviewComponent } from './ngx-gallery-preview.component';
-import { NgxGalleryComponent } from './ngx-gallery.component';
+import {NgxGalleryActionComponent} from './ngx-gallery-action.component';
+import {NgxGalleryArrowsComponent} from './ngx-gallery-arrows.component';
+import {NgxGalleryBulletsComponent} from './ngx-gallery-bullets.component';
+import {NgxGalleryImageComponent} from './ngx-gallery-image.component';
+import {NgxGalleryThumbnailsComponent} from './ngx-gallery-thumbnails.component';
+import {NgxGalleryPreviewComponent} from './ngx-gallery-preview.component';
+import {NgxGalleryComponent} from './ngx-gallery.component';
+import {EnhanceBackgroundDirective} from './enhance-background.directive';
+import {SrcFallbackDirective} from './src-fallback.directive';
 
 export * from './ngx-gallery.component';
 export * from './ngx-gallery-action.component';
@@ -27,31 +29,34 @@ export * from './ngx-gallery-order.model';
 export * from './ngx-gallery-ordered-image.model';
 export * from './ngx-gallery-action.model';
 
-export class CustomHammerConfig extends HammerGestureConfig  {
-    overrides = <any>{
-        'pinch': { enable: false },
-        'rotate': { enable: false }
-    };
+export class CustomHammerConfig extends HammerGestureConfig {
+  overrides = <any>{
+    'pinch': {enable: false},
+    'rotate': {enable: false}
+  };
 }
 
 @NgModule({
-    imports: [
-        CommonModule
-    ],
-    declarations: [
-        NgxGalleryActionComponent,
-        NgxGalleryArrowsComponent,
-        NgxGalleryBulletsComponent,
-        NgxGalleryImageComponent,
-        NgxGalleryThumbnailsComponent,
-        NgxGalleryPreviewComponent,
-        NgxGalleryComponent
-    ],
-    exports: [
-        NgxGalleryComponent
-    ],
-    providers: [
-        { provide: HAMMER_GESTURE_CONFIG, useClass: CustomHammerConfig }
-    ]
+  imports: [
+    CommonModule
+  ],
+  declarations: [
+    NgxGalleryActionComponent,
+    NgxGalleryArrowsComponent,
+    NgxGalleryBulletsComponent,
+    NgxGalleryImageComponent,
+    NgxGalleryThumbnailsComponent,
+    NgxGalleryPreviewComponent,
+    NgxGalleryComponent,
+    EnhanceBackgroundDirective,
+    SrcFallbackDirective
+  ],
+  exports: [
+    NgxGalleryComponent
+  ],
+  providers: [
+    {provide: HAMMER_GESTURE_CONFIG, useClass: CustomHammerConfig}
+  ]
 })
-export class NgxGalleryModule {}
+export class NgxGalleryModule {
+}
