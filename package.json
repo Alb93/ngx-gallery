@@ -5,6 +5,7 @@
   "scripts": {
     "build": "gulp build",
     "build:watch": "gulp",
+    "prepare": "npm run build",
     "docs": "npm run docs:build",
     "docs:build": "compodoc -p tsconfig.json -n ngx-gallery -d docs --hideGenerator",
     "docs:serve": "npm run docs:build -- -s",
