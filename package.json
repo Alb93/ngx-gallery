@@ -1,7 +1,7 @@
 {
   "main": "dist/index.js",
   "name": "ngx-gallery",
-  "version": "5.10.0",
+  "version": "5.11.0",
   "description": "Responsive Angular 2 / 4 image gallery plugin",
   "scripts": {
     "build": "gulp build",
@@ -18,7 +18,9 @@
     "test": "tsc && karma start",
     "coveralls": "coveralls < coverage/lcovonly/lcov.info"
   },
-  "files": ["dist/**/*"],
+  "files": [
+    "dist/**/*"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/lukasz-galka/ngx-gallery.git"
@@ -44,12 +46,12 @@
   },
   "homepage": "https://lukasz-galka.github.io/ngx-gallery-demo",
   "devDependencies": {
-    "@angular/common": "^4.0.0",
-    "@angular/compiler": "^4.0.0",
-    "@angular/compiler-cli": "^4.0.0",
-    "@angular/core": "^4.0.0",
-    "@angular/platform-browser": "^4.0.0",
-    "@angular/platform-browser-dynamic": "^4.0.0",
+    "@angular/common": "^8.2.6",
+    "@angular/compiler": "^8.2.6",
+    "@angular/compiler-cli": "^8.2.6",
+    "@angular/core": "^8.2.6",
+    "@angular/platform-browser": "^8.2.6",
+    "@angular/platform-browser-dynamic": "^8.2.6",
     "@compodoc/compodoc": "^1.0.0-beta.10",
     "@types/jasmine": "2.6.2",
     "@types/node": "~8.0.32",
@@ -79,12 +81,13 @@
     "node-watch": "^0.5.2",
     "rollup": "^0.50.0",
     "run-sequence": "^2.2.0",
-    "rxjs": "^5.1.0",
+    "rxjs": "^6.4.0",
     "systemjs": "^0.20.12",
     "ts-node": "~3.3.0",
+    "tsickle": "^0.38.0",
     "tslint": "~5.8.0",
-    "typescript": "~2.6.0",
-    "zone.js": "^0.8.4"
+    "typescript": "~3.5.3",
+    "zone.js": "^0.10.2"
   },
   "engines": {
     "node": ">=6.0.0"
